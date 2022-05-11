@@ -1,0 +1,38 @@
+#!/usr/bin/env python
+
+# This script converts units
+# ex. uc tsp tbsp 100 
+#     will tell you that $10/tsp is $29.4/tbsp
+import sys
+
+# Conversion into fl-oz/oz
+CONVERSION = { 
+  "tsp" : 0.167,
+  "tbsp" : 0.5,
+  "floz" : 1,
+  "cup" : 8,
+  "pint" : 16,
+  "quart" : 32,
+  "ml" : 0.034,
+
+  "lbs" : 16,
+  "oz" : 1,
+  "mg" : (1/28350),
+  "g" : (1/28.35),
+}
+
+if __name__ == "__main__":
+  # arg0: unitFrom
+  # arg1: unitTo
+  # arg2: price
+
+  assert( len( sys.argv ) == 4 )
+
+  unitFrom = str( sys.argv[ 1 ] )
+  unitTo = str( sys.argv[ 2 ] )
+  price = float( sys.argv[ 3 ] )
+
+  toFlOz = 1 * CONVERSION[ unitFrom ]
+  conversionFactor = CONVERSION[ unitTo ] / toFlOz
+
+  print( conversionFactor * price )

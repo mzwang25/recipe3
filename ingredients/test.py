@@ -1,5 +1,5 @@
 from Vegtables import *
 
-gb = GreenBeans( 2, "lbs" )
-gb.amountInUnit( "lbs" )
+gb = GreenBeans( 200, "oz" )
 
+print( gb.cost() )

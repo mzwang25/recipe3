@@ -43,7 +43,7 @@ class BaseIngredient:
     self._originalUnits = units
     priceType = self.getPriceType()
 
-    self._amount = self.convertUnitToOz( "lbs", amountNeeded )
+    self._amount = self.convertUnitToOz( units, amountNeeded )
 
     self._orignalUnits = units
     self._isVolume = ( priceType == "byFlOz" )
@@ -64,13 +64,37 @@ class BaseIngredient:
 
     return amount
 
+  def convertOzToUnit( self, outUnit, value ):
+    # Converts to either oz or fl-oz
+    priceType = self.getPriceType()
+
+    amount = None
+    if priceType == "byLbs":
+      amount = value / self._massConvert[ outUnit ]
+    elif priceType == "byFlOz":
+      amount = value / self._volumeConvert[ outUnit ]
+
+    return amount
+
+  def convertUnitToUnit( self, inUnit, outUnit, value ):
+    convertToOz = self.convertUnitToOz( inUnit, value )
+    return self.convertOzToUnit( outUnit, convertToOz )
+
   def amountInUnit( self, unit ):
-    pass
+    return self.convertOzToUnit( unit, self._amount )
+
+  def convertPricePerUnit( self, inUnit, outUnit, price ):
+    conversionFactor = self.convertUnitToUnit( inUnit, outUnit, 1 )
+    return price / conversionFactor
 
   def cost( self ):
     pricePair = self._prices[ "Ralphs" ]
-    costPer = pricePair[ 0 ]
-    costBy = pricePair[ 1 ]
+    priceType = self.getPriceType()
+    rateUnit = "lbs" if priceType == "byLbs" else "floz"
 
-    print( costPer, costBy )
-    print(self._amount)
+    costPer = pricePair[ 0 ]
+    costInUnit = self.convertPricePerUnit( rateUnit, self._originalUnits,  costPer ) 
+    amountInUnit = self.amountInUnit( self._originalUnits )
+
+    return "{:.3f}".format( amountInUnit * costInUnit )
+

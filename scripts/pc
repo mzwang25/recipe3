@@ -32,7 +32,7 @@ if __name__ == "__main__":
   unitTo = str( sys.argv[ 2 ] )
   price = float( sys.argv[ 3 ] )
 
-  toFlOz = 1 * CONVERSION[ unitFrom ]
-  conversionFactor = CONVERSION[ unitTo ] / toFlOz
+  toFlOz = 1 * float( CONVERSION[ unitFrom ] )
+  conversionFactor = float( CONVERSION[ unitTo ] ) / toFlOz
 
   print( conversionFactor * price )

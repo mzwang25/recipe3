@@ -24,6 +24,8 @@ class BaseIngredient:
     "oz" : 1,
     "mg" : (1/28350),
     "g" : (1/28.35),
+    "tbsp" : 0.25,
+    "tsp" : (0.25/5)
   }
 
   _originalUnits = None
@@ -101,7 +103,7 @@ class BaseIngredient:
     
     if priceType == "byLbs":
       rateUnit = "lbs"
-    elif priceType == "floz":
+    elif priceType == "byFlOz":
       rateUnit = "floz"
     else:
       rateUnit = "cnt"

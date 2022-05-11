@@ -110,5 +110,5 @@ class BaseIngredient:
     costInUnit = self.convertPricePerUnit( rateUnit, self._originalUnits,  costPer ) 
     amountInUnit = self.amountInUnit( self._originalUnits )
 
-    return "{:.3f}".format( amountInUnit * costInUnit )
+    return float( "{:.3f}".format( amountInUnit * costInUnit ) )
 

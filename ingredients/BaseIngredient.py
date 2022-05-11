@@ -40,16 +40,37 @@ class BaseIngredient:
 
     self._prices = pricePairs
     self._amount = amountNeeded
+    self._originalUnits = units
+    priceType = self.getPriceType()
 
-    # TODO: For now only use the first pricePair
-    priceType = pricePairs[ "Ralphs" ][ 1 ]
-
-    if priceType == "byLbs":
-      self._amount = amountNeeded * self._massConvert[ units ]
-    elif priceType == "byFlOz":
-      self._amount = amountNeeded * self._volumeConvert[ units ]
+    self._amount = self.convertUnitToOz( "lbs", amountNeeded )
 
     self._orignalUnits = units
     self._isVolume = ( priceType == "byFlOz" )
 
+  def getPriceType( self ):
+    # TODO: For now only use the first pricePair
+    return self._prices[ "Ralphs" ][ 1 ]
 
+  def convertUnitToOz( self, inUnit, value ):
+    # Converts to either oz or fl-oz
+    priceType = self.getPriceType()
+
+    amount = None
+    if priceType == "byLbs":
+      amount = value * self._massConvert[ inUnit ]
+    elif priceType == "byFlOz":
+      amount = value * self._volumeConvert[ inUnit ]
+
+    return amount
+
+  def amountInUnit( self, unit ):
+    pass
+
+  def cost( self ):
+    pricePair = self._prices[ "Ralphs" ]
+    costPer = pricePair[ 0 ]
+    costBy = pricePair[ 1 ]
+
+    print( costPer, costBy )
+    print(self._amount)

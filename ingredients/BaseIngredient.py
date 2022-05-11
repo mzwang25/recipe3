@@ -42,10 +42,14 @@ class BaseIngredient:
     self._amount = amountNeeded
 
     # TODO: For now only use the first pricePair
-    priceType = pricePairs[ pricePairs.keys()[ 0 ] ][ 1 ]
+    priceType = pricePairs[ "Ralphs" ][ 1 ]
+
     if priceType == "byLbs":
-      self._amount = amountNeeded * massConvert[ units ]
+      self._amount = amountNeeded * self._massConvert[ units ]
     elif priceType == "byFlOz":
-      self._amount = amountNeeded * volumeConvert[ units ]
+      self._amount = amountNeeded * self._volumeConvert[ units ]
+
+    self._orignalUnits = units
+    self._isVolume = ( priceType == "byFlOz" )
 
 

@@ -12,7 +12,7 @@ def createObject( buffer ):
   ingStr = ""
   code = "class {} ( BaseIngredient ):\n" + \
          "  def __init__( self, amountNeeded, units ):\n" + \
-         "    super().__init__( amountNeeded," + \
+         "    super().__init__( amountNeeded, units," + \
          " {}\n" + \
          "  )"
 

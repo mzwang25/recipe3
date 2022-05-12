@@ -2,8 +2,7 @@ from BaseRecipe import BaseRecipe
 import sys
 sys.path.append( '../ingredients' )
 
-from Vegtables import *
-from Spices import *
+from ingredients import *
 
 class ChickenAdobo( BaseRecipe ):
   ingredientList = [
@@ -20,4 +19,8 @@ class ChickenAdobo( BaseRecipe ):
     Cornstarch( 2, 'tbsp' )
   ]
 
-ChickenAdobo().printCostBreakdown()
+if __name__ == "__main__":
+  r = ChickenAdobo()
+  r.printCostBreakdown()
+  print()
+  print( r.totalCost() )

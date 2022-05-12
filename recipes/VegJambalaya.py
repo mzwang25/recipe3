@@ -2,8 +2,7 @@ from BaseRecipe import BaseRecipe
 import sys
 sys.path.append( '../ingredients' )
 
-from Vegtables import *
-from Spices import *
+from ingredients import *
 
 class VegJambalaya( BaseRecipe ):
   ingredientList = [
@@ -24,3 +23,8 @@ class VegJambalaya( BaseRecipe ):
     ChickenBroth( 3, 'cup' ),
   ]
 
+if __name__ == "__main__":
+  r = VegJambalaya()
+  r.printCostBreakdown()
+  print()
+  print( r.totalCost() )

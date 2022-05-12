@@ -25,9 +25,10 @@ class BaseIngredient:
     "mg" : (1/28350),
     "g" : (1/28.35),
 
-    # Tbsp and Tsp are estimates in case of powders
+    # Tbsp, Tsp, Cups are estimates in case of powders
     "tbsp" : 0.25,
-    "tsp" : (0.25/5)
+    "tsp" : (0.25/5),
+    "cups" : (5)
   }
 
   _originalUnits = None

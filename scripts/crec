@@ -1,0 +1,29 @@
+#!/usr/bin/env python
+
+'''
+Creates a recipe boilerplate ex.
+  crec Test > Test.py
+
+'''
+
+import sys
+
+code = \
+  "import sys\n" + \
+  "sys.path.append( '../ingredients' )\n\n" + \
+  "from BaseRecipe import BaseRecipe\n" + \
+  "from ingredients import *\n\n" + \
+  "class {}( BaseRecipe ):\n" + \
+  "  ingredientList = [\n" + \
+  "\n" + \
+  "  ]\n\n" + \
+  "if __name__ == '__main__':\n" + \
+  "  r = {}()\n" + \
+  "  r.printCostBreakdown()\n" + \
+  "  print()\n" + \
+  "  print( r.totalCost() )"
+
+
+assert len( sys.argv ) == 2
+recName = sys.argv[ 1 ]
+print( code.format( recName, recName ) )

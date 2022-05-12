@@ -76,3 +76,16 @@ Ralphs 24.8 byLbs
 TestObj
 Ralphs 15 12 oz
 =
+Cornmeal
+Ralphs 2.69 24 oz
+=
+Spinich
+Ralphs 2.99 10.5 cup
+=
+ChiliFlakes
+Ralphs 1.25 1.5 oz
+=
+Eggs
+Ralphs 0.3 byCnt
+=
+

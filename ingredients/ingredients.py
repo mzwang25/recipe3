@@ -150,3 +150,9 @@ class Cornstarch ( BaseIngredient ):
       "Ralphs" : ( 24.8, "byLbs" ),
     }
   )
+class TestObj ( BaseIngredient ):
+  def __init__( self, amountNeeded, units ):
+    super().__init__( amountNeeded, units, {
+      "Ralphs" : ( 20.0, "byLbs" ),
+    }
+  )

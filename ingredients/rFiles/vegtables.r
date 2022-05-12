@@ -23,5 +23,8 @@ Carrots
 Ralphs 0.15 byCnt
 =
 Garlic
-Ralphs 0.69 byCnt
+Ralphs 0.069 byCnt
+=
+Cornstarch
+Ralphs 24.8 byLbs
 =

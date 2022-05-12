@@ -57,7 +57,7 @@ class Oregano ( BaseIngredient ):
 class SoySauce ( BaseIngredient ):
   def __init__( self, amountNeeded, units ):
     super().__init__( amountNeeded, units, {
-      "Ralphs" : ( 3.29, "byFlOz" ),
+      "Ralphs" : ( 0.329, "byFlOz" ),
     }
   )
 class LongRice ( BaseIngredient ):
@@ -70,5 +70,23 @@ class ChickenBroth ( BaseIngredient ):
   def __init__( self, amountNeeded, units ):
     super().__init__( amountNeeded, units, {
       "Ralphs" : ( 0.137, "byFlOz" ),
+    }
+  )
+class ChickenBreast ( BaseIngredient ):
+  def __init__( self, amountNeeded, units ):
+    super().__init__( amountNeeded, units, {
+      "Ralphs" : ( 1.20, "byCnt" ),
+    }
+  )
+class RiceVinegar ( BaseIngredient ):
+  def __init__( self, amountNeeded, units ):
+    super().__init__( amountNeeded, units, {
+      "Ralphs" : ( 0.25, "byFlOz" ),
+    }
+  )
+class BlackPepper ( BaseIngredient ):
+  def __init__( self, amountNeeded, units ):
+    super().__init__( amountNeeded, units, {
+      "Ralphs" : ( 17.92, "byLbs" ),
     }
   )

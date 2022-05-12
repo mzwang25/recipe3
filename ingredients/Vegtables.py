@@ -51,6 +51,12 @@ class Carrots ( BaseIngredient ):
 class Garlic ( BaseIngredient ):
   def __init__( self, amountNeeded, units ):
     super().__init__( amountNeeded, units, {
-      "Ralphs" : ( 0.69, "byCnt" ),
+      "Ralphs" : ( 0.069, "byCnt" ),
+    }
+  )
+class Cornstarch ( BaseIngredient ):
+  def __init__( self, amountNeeded, units ):
+    super().__init__( amountNeeded, units, {
+      "Ralphs" : ( 24.8, "byLbs" ),
     }
   )

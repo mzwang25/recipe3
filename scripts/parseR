@@ -8,6 +8,61 @@
 # 
 
 import sys
+# Conversion into fl-oz
+_volumeConvert = { 
+  "tsp" : 0.167,
+  "tbsp" : 0.5,
+  "floz" : 1,
+  "cup" : 8,
+  "pint" : 16,
+  "quart" : 32,
+  "ml" : 0.034,
+}
+
+# Conversion into oz
+_massConvert = {
+  "lbs" : 16,
+  "oz" : 1,
+  "mg" : (1/28350),
+  "g" : (1/28.35),
+
+  # Tbsp and Tsp are estimates in case of powders
+  "tbsp" : 0.25,
+  "tsp" : (0.25/5)
+}
+
+def unitType( unit ):
+  return "byFlOz" if unit in _volumeConvert else "byLbs"
+
+def convertUnit( unitFrom, unitTo, value ):
+  conversionTable = None
+  if unitType( unitFrom ) == "byFlOz":
+    conversionTable = _volumeConvert
+  else:
+    conversionTable = _massConvert
+
+  return ( value * conversionTable[ unitFrom ] ) / conversionTable[ unitTo ]
+    
+
+def fourItemFormat( line ):
+  # Ex. 'ralphs', '15', '12', 'oz'
+  # This means $15/ 12 oz.
+  # And this function will reformat to byCnt, byLbs, or byFlOz
+  # This format does not include "byCnt" which will fail
+
+  store = line[ 0 ]
+  price = float( line[ 1 ] )
+  perValue = float( line[ 2 ] )
+  perUnit = line[  3 ]
+
+  rate = None
+  rateType = unitType( perUnit )
+  if rateType == "byLbs":
+    rate = convertUnit( perUnit, 'lbs', perValue )
+  else:
+    rate = convertUnit( perUnit, 'floz', perValue )
+  
+  return( [ store, price / rate, rateType ] )
 
 def createObject( buffer ):
   ingredientName = buffer[0]
@@ -19,7 +74,12 @@ def createObject( buffer ):
          "  )"
 
   for i in range( 1, len( buffer ) ):
+
     sep = buffer[i].split()
+
+    if ( len( sep ) == 4 ):
+      sep = fourItemFormat( sep )
+
     ingStr += "      \"{}\" : ( {}, \"{}\" ),\n".format( 
       sep[ 0 ], 
       sep[ 1 ], 

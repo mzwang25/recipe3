@@ -24,6 +24,8 @@ class BaseIngredient:
     "oz" : 1,
     "mg" : (1/28350),
     "g" : (1/28.35),
+
+    # Tbsp and Tsp are estimates in case of powders
     "tbsp" : 0.25,
     "tsp" : (0.25/5)
   }
@@ -113,4 +115,7 @@ class BaseIngredient:
     amountInUnit = self.amountInUnit( self._originalUnits )
 
     return float( "{:.3f}".format( amountInUnit * costInUnit ) )
+
+  def __str__( self ):
+    return self.__class__.__name__
 

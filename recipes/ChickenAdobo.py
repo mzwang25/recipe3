@@ -19,3 +19,5 @@ class ChickenAdobo( BaseRecipe ):
     LongRice( 2, 'cup' ),
     Cornstarch( 2, 'tbsp' )
   ]
+
+ChickenAdobo().printCostBreakdown()

@@ -1,0 +1,28 @@
+recipe3
+
+Another attempt to make a useful meal planner
+
+.r format : (All units can be substituted)
+  # This means GarlicPowder is $0.126/flOz
+  GarlicPowder
+  Ralphs 0.126 byFlOz
+  =
+
+  # This Means Paprika is $53.28/lbs and that 1 cup == 84.8 g
+  Paprika
+  Ralphs 53.28 byLbs|1 cup 84.8 g
+  =
+
+  # This means Chili Flakes are $1.25/1.5 Oz and that 1 cup == 115 g
+  ChiliFlakes
+  Ralphs 1.25 1.5 oz |1 cup 115 g
+  =
+
+scripts: 
+  inge  - edit ingredients.r
+  upd   - update ingredients.py with the latest ingredients.r
+  tupd  - test upd
+  src   - source env file
+  scr   - goto script directory
+  ing   - goto ingredients directory
+  rec   - goto recipe directory

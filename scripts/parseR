@@ -25,10 +25,6 @@ _massConvert = {
   "oz" : 1,
   "mg" : (1/28350),
   "g" : (1/28.35),
-
-  # Tbsp and Tsp are estimates in case of powders
-  "tbsp" : 0.25,
-  "tsp" : (0.25/5)
 }
 
 def unitType( unit ):
@@ -70,12 +66,14 @@ def createObject( buffer ):
   code = "class {} ( BaseIngredient ):\n" + \
          "  def __init__( self, amountNeeded, units ):\n" + \
          "    super().__init__( amountNeeded, units," + \
-         " {}\n" + \
+         " {}{}\n" + \
          "  )"
 
   for i in range( 1, len( buffer ) ):
 
-    sep = buffer[i].split()
+    divSep = buffer[i].split( '|' ) 
+    sep = divSep[ 0 ].split()
+    massVolume = ", \"" + divSep[ 1 ] + '"' if len( divSep ) > 1 else ""
 
     if ( len( sep ) == 4 ):
       sep = fourItemFormat( sep )
@@ -85,8 +83,8 @@ def createObject( buffer ):
       sep[ 1 ], 
       sep[ 2 ] )
 
-  print(code.format( ingredientName, "{\n" + ingStr + "    }" ) )
-    
+  print(code.format( ingredientName, "{\n" + ingStr + "    }", massVolume ) )
+
 
 if __name__ == "__main__":
   print( "from BaseIngredient import BaseIngredient\n" )
@@ -100,4 +98,3 @@ if __name__ == "__main__":
     else:
       createObject( buffer )
       buffer = []
-

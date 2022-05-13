@@ -12,12 +12,6 @@ class SambalOelek ( BaseIngredient ):
       "Ralphs" : ( 3.98, "byLbs" ),
     }
   )
-class Flour ( BaseIngredient ):
-  def __init__( self, amountNeeded, units ):
-    super().__init__( amountNeeded, units, {
-      "Ralphs" : ( 1.096, "byFlOz" ),
-    }
-  )
 class SourCream ( BaseIngredient ):
   def __init__( self, amountNeeded, units ):
     super().__init__( amountNeeded, units, {
@@ -40,19 +34,19 @@ class Paprika ( BaseIngredient ):
   def __init__( self, amountNeeded, units ):
     super().__init__( amountNeeded, units, {
       "Ralphs" : ( 21.28, "byLbs" ),
-    }
+    }, "1 cup 108.8 g"
   )
 class Cayenne ( BaseIngredient ):
   def __init__( self, amountNeeded, units ):
     super().__init__( amountNeeded, units, {
       "Ralphs" : ( 53.28, "byLbs" ),
-    }
+    }, "1 cup 84.8 g"
   )
 class Oregano ( BaseIngredient ):
   def __init__( self, amountNeeded, units ):
     super().__init__( amountNeeded, units, {
       "Ralphs" : ( 82.88, "byLbs" ),
-    }
+    }, "1 cup 86.4 g"
   )
 class SoySauce ( BaseIngredient ):
   def __init__( self, amountNeeded, units ):
@@ -88,7 +82,7 @@ class BlackPepper ( BaseIngredient ):
   def __init__( self, amountNeeded, units ):
     super().__init__( amountNeeded, units, {
       "Ralphs" : ( 17.92, "byLbs" ),
-    }
+    }, "1 cup 145 g"
   )
 class GreenBeans ( BaseIngredient ):
   def __init__( self, amountNeeded, units ):
@@ -148,11 +142,41 @@ class Cornstarch ( BaseIngredient ):
   def __init__( self, amountNeeded, units ):
     super().__init__( amountNeeded, units, {
       "Ralphs" : ( 24.8, "byLbs" ),
-    }
+    }, "0.25 cup 28 g"
   )
 class TestObj ( BaseIngredient ):
   def __init__( self, amountNeeded, units ):
     super().__init__( amountNeeded, units, {
       "Ralphs" : ( 20.0, "byLbs" ),
     }
+  )
+class Cornmeal ( BaseIngredient ):
+  def __init__( self, amountNeeded, units ):
+    super().__init__( amountNeeded, units, {
+      "Ralphs" : ( 1.79333333333, "byLbs" ),
+    }, "1 cup 138 g"
+  )
+class Spinich ( BaseIngredient ):
+  def __init__( self, amountNeeded, units ):
+    super().__init__( amountNeeded, units, {
+      "Ralphs" : ( 0.0355952380952, "byFlOz" ),
+    }
+  )
+class ChiliFlakes ( BaseIngredient ):
+  def __init__( self, amountNeeded, units ):
+    super().__init__( amountNeeded, units, {
+      "Ralphs" : ( 13.3333333333, "byLbs" ),
+    }, "1 cup 115 g"
+  )
+class Eggs ( BaseIngredient ):
+  def __init__( self, amountNeeded, units ):
+    super().__init__( amountNeeded, units, {
+      "Ralphs" : ( 0.3, "byCnt" ),
+    }
+  )
+class Flour ( BaseIngredient ):
+  def __init__( self, amountNeeded, units ):
+    super().__init__( amountNeeded, units, {
+      "Ralphs" : ( 0.75, "byLbs" ),
+    }, "1 cup 120 g"
   )

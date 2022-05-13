@@ -1,6 +1,7 @@
 export PATH="$HOME/recipe3/scripts:$PATH"
 
 alias src="source $HOME/recipe3/envSetup.sh"
+alias scr="cd $HOME/recipe3/scripts"
 alias rFi="cd $HOME/recipe3/ingredients/rFiles"
 alias ing="cd $HOME/recipe3/ingredients"
 alias rec="cd $HOME/recipe3/recipes"

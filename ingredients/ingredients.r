@@ -4,9 +4,6 @@ Ralphs 0.126 byFlOz
 SambalOelek
 Ralphs 3.98 byLbs
 =
-Flour
-Ralphs 1.096 byFlOz
-=
 SourCream
 Ralphs 2.28 byLbs
 =
@@ -17,13 +14,13 @@ OliveOil
 Ralphs 0.43 byFlOz
 =
 Paprika
-Ralphs 21.28 byLbs
+Ralphs 21.28 byLbs|1 cup 108.8 g
 =
 Cayenne
-Ralphs 53.28 byLbs
+Ralphs 53.28 byLbs|1 cup 84.8 g
 =
 Oregano
-Ralphs 82.88 byLbs
+Ralphs 82.88 byLbs|1 cup 86.4 g
 =
 SoySauce
 Ralphs 0.329 byFlOz
@@ -41,7 +38,7 @@ RiceVinegar
 Ralphs 0.25 byFlOz
 =
 BlackPepper
-Ralphs 17.92 byLbs
+Ralphs 17.92 byLbs|1 cup 145 g
 =
 GreenBeans
 Ralphs 1.99 byLbs
@@ -71,21 +68,23 @@ Garlic
 Ralphs 0.069 byCnt
 =
 Cornstarch
-Ralphs 24.8 byLbs
+Ralphs 24.8 byLbs|0.25 cup 28 g
 =
 TestObj
 Ralphs 15 12 oz
 =
 Cornmeal
-Ralphs 2.69 24 oz
+Ralphs 2.69 24 oz|1 cup 138 g
 =
 Spinich
 Ralphs 2.99 10.5 cup
 =
 ChiliFlakes
-Ralphs 1.25 1.5 oz
+Ralphs 1.25 1.5 oz|1 cup 115 g
 =
 Eggs
 Ralphs 0.3 byCnt
 =
-
+Flour
+Ralphs 0.75 byLbs|1 cup 120 g
+=

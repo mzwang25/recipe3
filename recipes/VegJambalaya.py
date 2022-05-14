@@ -24,9 +24,7 @@ class VegJambalaya( BaseRecipe ):
       ChickenBroth( 3, 'cup' ),
     ]
     self.servingSize = 3
-
     super().__init__( targetServingSize )
-
 
 if __name__ == "__main__":
   r = VegJambalaya()

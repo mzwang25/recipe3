@@ -10,7 +10,7 @@ class Noodles( BaseRecipe ):
         Flour( 300, 'g' ),
         Eggs( 1, 'cnt' ),
       ]
-    self.servingSize = 5
+    self.servingSize = 3
     super().__init__( targetServingSize )
 
 

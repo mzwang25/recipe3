@@ -14,8 +14,8 @@ class Polenta( BaseRecipe ):
     Eggs( 2, 'cnt' )
   ]
 
+  servingSize = 1
+
 if __name__ == "__main__":
   r = Polenta()
   r.printCostBreakdown()
-  print()
-  print( r.totalCost() )

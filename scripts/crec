@@ -19,9 +19,7 @@ code = \
   "  ]\n\n" + \
   "if __name__ == '__main__':\n" + \
   "  r = {}()\n" + \
-  "  r.printCostBreakdown()\n" + \
-  "  print()\n" + \
-  "  print( r.totalCost() )"
+  "  r.printCostBreakdown()"
 
 
 assert len( sys.argv ) == 2

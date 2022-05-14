@@ -19,8 +19,8 @@ class ChickenAdobo( BaseRecipe ):
     Cornstarch( 2, 'tbsp' )
   ]
 
+  servingSize = 3
+
 if __name__ == "__main__":
   r = ChickenAdobo()
   r.printCostBreakdown()
-  print()
-  print( r.totalCost() )

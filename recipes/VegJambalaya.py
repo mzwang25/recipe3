@@ -23,8 +23,8 @@ class VegJambalaya( BaseRecipe ):
     ChickenBroth( 3, 'cup' ),
   ]
 
+  servingSize = 3
+
 if __name__ == "__main__":
   r = VegJambalaya()
   r.printCostBreakdown()
-  print()
-  print( r.totalCost() )

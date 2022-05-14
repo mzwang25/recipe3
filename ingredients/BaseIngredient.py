@@ -27,6 +27,7 @@ class BaseIngredient:
   }
 
   _originalUnits = None
+  _originalVal = None
   _isVolume = None
   _flOzPerOz = None
 
@@ -42,6 +43,7 @@ class BaseIngredient:
     self._prices = pricePairs
     self._amount = amountNeeded
     self._originalUnits = units
+    self._originalVal = amountNeeded
     priceType = self.getPriceType()
 
     self._amount = self.convertUnitToOz( units, amountNeeded )

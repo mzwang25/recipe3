@@ -5,12 +5,14 @@ from BaseRecipe import BaseRecipe
 from ingredients import *
 
 class Noodles( BaseRecipe ):
-  ingredientList = [
-    Flour( 300, 'g' ),
-    Eggs( 1, 'cnt' ),
-  ]
+  def __init__( self, targetServingSize=None ):
+    self.ingredientList = [
+        Flour( 300, 'g' ),
+        Eggs( 1, 'cnt' ),
+      ]
+    self.servingSize = 5
+    super().__init__( targetServingSize )
 
-  servingSize = 5
 
 if __name__ == '__main__':
   r = Noodles()

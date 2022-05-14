@@ -14,9 +14,11 @@ code = \
   "from BaseRecipe import BaseRecipe\n" + \
   "from ingredients import *\n\n" + \
   "class {}( BaseRecipe ):\n" + \
-  "  ingredientList = [\n" + \
+  "  def __init__( self, targetServingSize=None ):\n" + \
+  "    self.ingredientList = [\n" + \
   "\n" + \
-  "  ]\n\n" + \
+  "    ]\n\n" + \
+  "    super().__init__( targetServingSize )\n" + \
   "if __name__ == '__main__':\n" + \
   "  r = {}()\n" + \
   "  r.printCostBreakdown()"

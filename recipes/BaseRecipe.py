@@ -12,7 +12,6 @@ class BaseRecipe:
 
   def __init__( self, targetServingSize=None ):
     self.maxPaddingLen = 0
-    print(self.ingredientList[0]._amount)
     for items in self.ingredientList:
       self.maxPaddingLen = max( 10, len( str( items ) ), self.maxPaddingLen )
 

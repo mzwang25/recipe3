@@ -59,10 +59,8 @@ class BaseIngredient:
       if ( self.getUnitType( units ) == "byFlOz" ):
         # flOz -> oz
           self._amount /= self._flOzPerOz 
-          self._originalUnits = "oz"
       else:
           self._amount *= self._flOzPerOz 
-          self._originalUnits = "floz"
 
 
   def getPriceType( self ):

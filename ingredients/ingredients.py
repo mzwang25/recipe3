@@ -180,3 +180,9 @@ class Flour ( BaseIngredient ):
       "Ralphs" : ( 0.75, "byLbs" ),
     }, "1 cup 120 g"
   )
+class Cumin ( BaseIngredient ):
+  def __init__( self, amountNeeded, units ):
+    super().__init__( amountNeeded, units, {
+      "Ralphs" : ( 39.4074074074, "byLbs" ),
+    }, "1 cup 3.4 oz"
+  )

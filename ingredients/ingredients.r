@@ -91,3 +91,15 @@ Ralphs 0.75 byLbs|1 cup 120 g
 Cumin
 Ralphs 3.99 1.62 oz|1 cup 3.4 oz
 =
+CoconutMilk
+Ralphs 1.79 13.5 floz
+=
+Brocolli
+Ralphs 1.99 byLbs|1 cup 91 g
+=
+Jalapeno
+Ralphs 0.15 byCnt
+=
+PeanutButter
+Ralphs 1.89 16 oz|1 cup 250 g
+=

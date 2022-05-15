@@ -9,6 +9,7 @@ class BaseRecipe:
   maxPaddingLen = None # Number of spaces before price printout
   servingSize = None
   daysGoodFor = 3
+  warnMsg = []
 
   def __init__( self, targetServingSize=None ):
     self.maxPaddingLen = 0
@@ -42,6 +43,10 @@ class BaseRecipe:
     perServe = cost / self.servingSize
     print()
     print( "${}/Total\n${}/Serving".format( self.totalCost(), perServe ) )
+    print()
+
+    for msg in self.warnMsg:
+      print( "!!! " + msg )
 
   def adjustServingSize( self, targetSize ):
     factorToMultiply = float( targetSize ) / float( self.servingSize )

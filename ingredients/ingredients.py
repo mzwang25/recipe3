@@ -186,3 +186,27 @@ class Cumin ( BaseIngredient ):
       "Ralphs" : ( 39.4074074074, "byLbs" ),
     }, "1 cup 3.4 oz"
   )
+class CoconutMilk ( BaseIngredient ):
+  def __init__( self, amountNeeded, units ):
+    super().__init__( amountNeeded, units, {
+      "Ralphs" : ( 0.132592592593, "byFlOz" ),
+    }
+  )
+class Brocolli ( BaseIngredient ):
+  def __init__( self, amountNeeded, units ):
+    super().__init__( amountNeeded, units, {
+      "Ralphs" : ( 1.99, "byLbs" ),
+    }, "1 cup 91 g"
+  )
+class Jalapeno ( BaseIngredient ):
+  def __init__( self, amountNeeded, units ):
+    super().__init__( amountNeeded, units, {
+      "Ralphs" : ( 0.15, "byCnt" ),
+    }
+  )
+class PeanutButter ( BaseIngredient ):
+  def __init__( self, amountNeeded, units ):
+    super().__init__( amountNeeded, units, {
+      "Ralphs" : ( 1.89, "byLbs" ),
+    }, "1 cup 250 g"
+  )

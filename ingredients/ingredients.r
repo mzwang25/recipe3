@@ -103,3 +103,24 @@ Ralphs 0.15 byCnt
 PeanutButter
 Ralphs 1.89 16 oz|1 cup 250 g
 =
+Coriander
+Ralphs 6.99 1.4 oz|1 cup 80 g
+=
+CocoaPowder
+Ralphs 2.99 8 oz|1 cup 100 g
+=
+Cinammon
+Ralphs 4.99 6.5 oz|1 cup 132 g
+=
+CannedChipotleChiliesInAdobo
+Ralphs 0.18 byCnt
+=
+CannedTomatoes
+Ralphs 1.49 28 oz
+=
+GroundBeef
+Ralphs 5.99 byLbs
+=
+BlackBeans
+Ralphs 0.89 15 oz|1 cup 172 g
+=

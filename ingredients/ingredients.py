@@ -210,3 +210,45 @@ class PeanutButter ( BaseIngredient ):
       "Ralphs" : ( 1.89, "byLbs" ),
     }, "1 cup 250 g"
   )
+class Coriander ( BaseIngredient ):
+  def __init__( self, amountNeeded, units ):
+    super().__init__( amountNeeded, units, {
+      "Ralphs" : ( 79.8857142857, "byLbs" ),
+    }, "1 cup 80 g"
+  )
+class CocoaPowder ( BaseIngredient ):
+  def __init__( self, amountNeeded, units ):
+    super().__init__( amountNeeded, units, {
+      "Ralphs" : ( 5.98, "byLbs" ),
+    }, "1 cup 100 g"
+  )
+class Cinammon ( BaseIngredient ):
+  def __init__( self, amountNeeded, units ):
+    super().__init__( amountNeeded, units, {
+      "Ralphs" : ( 12.2830769231, "byLbs" ),
+    }, "1 cup 132 g"
+  )
+class CannedChipotleChiliesInAdobo ( BaseIngredient ):
+  def __init__( self, amountNeeded, units ):
+    super().__init__( amountNeeded, units, {
+      "Ralphs" : ( 0.18, "byCnt" ),
+    }
+  )
+class CannedTomatoes ( BaseIngredient ):
+  def __init__( self, amountNeeded, units ):
+    super().__init__( amountNeeded, units, {
+      "Ralphs" : ( 0.851428571429, "byLbs" ),
+    }
+  )
+class GroundBeef ( BaseIngredient ):
+  def __init__( self, amountNeeded, units ):
+    super().__init__( amountNeeded, units, {
+      "Ralphs" : ( 5.99, "byLbs" ),
+    }
+  )
+class BlackBeans ( BaseIngredient ):
+  def __init__( self, amountNeeded, units ):
+    super().__init__( amountNeeded, units, {
+      "Ralphs" : ( 0.949333333333, "byLbs" ),
+    }, "1 cup 172 g"
+  )
